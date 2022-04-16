@@ -3,7 +3,7 @@ let ages = [3, 9, 23, 64, 2, 8, 28, 93];
 // 1a - Subtract the first element from the last element:
 console.log(ages[ages.length - 1] - ages[0]);
 
-//1b - Add a new age to teh end of array and repeats the subration step from above:
+//1b - Add a new age to the end of array and repeats the subration step from above:
 ages.push(66);
 console.log(ages[ages.length - 1] - ages[0]);
 
@@ -22,14 +22,14 @@ let names = ["Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"];
 
 //2a - create a variable for the total amount of letters for each name
 // that will loop throughthe array and add the length of was name to the total:
-let nameLetters = 0;
+let nameLetterAmounts = 0;
 
 for(let i = 0; i < names.length; i++)
 {
-    nameLetters += names[i].length;
+    nameLetterAmounts += names[i].length;
 }
 //create a variable for the avarage number of letters and calcualtes the average:
-let averageLetters = nameLetters / names.length;
+let averageLetters = nameLetterAmounts / names.length;
 console.log(averageLetters);
 
 //2b - creates a variable to hold the concatenation of all the names and loops through the array and adds to the variable:
@@ -57,14 +57,14 @@ for (let i = 0; i < names.length; i++) {
 }
     console.log(nameLengths);
 
-//6 - write a loop to iterate over the nameLengths array and calculate the sum of tall the elements in the array: 
+//6 - write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array: 
 let sumLength = nameLengths.reduce(function(acc, currentValue){
     return acc + currentValue;
 });
 console.log(sumLength);
 
-//7 - Write a function to that takes two parameters as arguments and returns the cord concatenated to itself n amount of times:
-// If you want you can add a space right after the ! inside the quotes that will space out the repeated word(s).
+//7 - Write a function to that takes two parameters as arguments and returns the cord concatenated to itself 'n' amount of times:
+// If you want you can add a space right after the "! " inside the quotes that will space out the repeated word(s).
 function speak(word, n) {
     let words= "";
     for (let i = 0; i < n; i++) {
@@ -75,7 +75,7 @@ function speak(word, n) {
 }
 console.log(speak("Hey Listen!", 6));
 
-//8 - Create a function that takes a first and last name and returns it as a full name with a space in between:
+//8 - Create a function that takes a first and last name and returns it as a full name WITH a space in between:
 function fullName(firstName, lastName){
     console.log(firstName + " " + lastName);
 }
@@ -131,4 +131,22 @@ function willBuyDrink(isHotOustside, moneyInPocket){
 }
 console.log(willBuyDrink(95, 17.50));
 
-//13 - make your own
+//13 - make your own function that solves a problem:
+//This was a conversation that happened and I just wanted to see if I could make it work.
+
+function catsFed(){
+    var askQuestion = prompt("Were the cats fed? y or n");
+    if(askQuestion == "n"){
+        var meow = prompt("So that is why they are meowing. Will you feed them? y or n");
+    }if( meow == "y"){
+        alert("Thank you!");
+    }else{
+        alert("Meow! Meow! Meow!");
+    }
+    //honesty I meant for the meowing to happen only after saying no the the "will you feed them" but it's more fitting that they meow all the time so I left it.
+       if(askQuestion == "y"){
+           alert("No more food Kitties!")
+       } 
+    }
+
+catsFed();
